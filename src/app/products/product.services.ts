@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { delay, Observable } from 'rxjs';
 import { Product } from './product.component';
+import { environment } from '../../enviromnet/enviromnet';
+
 
 
 @Injectable({
@@ -10,8 +12,8 @@ import { Product } from './product.component';
 })
 
 export class ProductService {
-private baseUrl = 'http://localhost:8080/wishit/products';
-private imageBaseUrl = 'http://localhost:8080/images/';
+private baseUrl = environment.api.userProducts;
+private imageBaseUrl = environment.api.productImages;
 
   constructor(private http: HttpClient) {}
 
