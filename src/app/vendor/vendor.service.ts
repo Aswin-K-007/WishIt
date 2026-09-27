@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class VendorService {
 
-  private baseUrl = 'http://localhost:8080/products';
+  private baseUrl = 'http://localhost:8080/wishit/products';
 
   constructor(private http: HttpClient) {}
 

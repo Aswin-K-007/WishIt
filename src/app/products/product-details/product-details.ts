@@ -41,6 +41,10 @@ export class ProductDetails implements OnInit {
     this.selectedImage = index;
   }
 
+  getImageUrl(imageName: string): string {
+    return this.productService.getImageUrl(imageName);
+  }
+
   addToCart(): void {
     console.log('Added:', this.product);
   }

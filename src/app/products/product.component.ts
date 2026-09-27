@@ -20,16 +20,10 @@ export class ProductComponent implements OnInit {
 
     ngOnInit(): void {
         this.products = this.productService.loadProducts();
-        // .pipe(
-        // tap((products: Product[]) => {
-        //     products.forEach(product => {
-        //         console.log(
-        //             product.name,
-        //             product.images?.[0]?.imageUrl
-        //             );
-        //         });
-        //     })
-        // );
+    }
+
+    getImageUrl(imageName: string): string {
+      return this.productService.getImageUrl(imageName);
     }
 
     viewProduct(product: Product): void {

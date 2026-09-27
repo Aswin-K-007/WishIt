@@ -92,7 +92,6 @@ export class Vendor {
         return;
       }
 
-      product.name="Test product 1";
       if (!product.name.trim()) {
         alert('Product name is required');
         return;
@@ -108,7 +107,6 @@ export class Vendor {
         return;
       }
 
-      product.stockQuantity=200;
       if (
         product.stockQuantity == null ||
         product.stockQuantity <= 0

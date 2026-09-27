@@ -20,10 +20,9 @@
             [class.active]="i === 0">
 
             <img
-              [src]="image.imageUrl"
+              [src]="getImageUrl(image.imageUrl)"
               class="main-image"
               [alt]="product.name">
-
           </div>
 
         }
@@ -59,12 +58,10 @@
 
         <img
           class="thumbnail"
-          [src]="image.imageUrl">
+          [src]="getImageUrl(image.imageUrl)">
 
       }
-
     </div>
-
   </div>
 
   <!-- Right Section -->
@@ -79,10 +76,6 @@
     <h2 class="price">
       ₹{{ product.price }}
     </h2>
-
-    <div class="stock">
-      In Stock: {{ product.stockQuantity }}
-    </div>
 
     <p class="description">
       {{ product.description }}
